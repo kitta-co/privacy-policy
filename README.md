@@ -7,3 +7,4 @@ Published with GitHub Pages from the `master` branch root.
 ## Pages
 
 - CardBal: `cardbal/`
+- K-Card Reader: `k-card-reader/`

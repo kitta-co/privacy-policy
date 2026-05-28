@@ -33,13 +33,16 @@
         </p>
       </section>
 
-      <h2>Optional Map Coverage Data</h2>
+      <h2>Anonymized Transit Data Collection</h2>
       <p>
-        CardBal may include an opt-in data sharing mechanism for South Korean
-        transit cards to improve map coverage. When enabled, the shared data is
-        limited to anonymized station and fare information, such as station
-        codes and fare values. It does not include personally identifiable
-        information.
+        CardBal collects anonymized transit data to improve the program,
+        including station and fare decoding, map coverage, and compatibility
+        with supported transit cards. The collected data is limited to technical
+        transit-card fields such as station codes, fare values, route or record
+        format hints, deduplication hashes, and related raw trip-record bytes
+        needed for decoder research. It does not include your name, contact
+        details, precise device location, payment account credentials, or
+        personally identifiable account information.
       </p>
 
       <h2>Data on Your Device</h2>
@@ -57,8 +60,9 @@
         CardBal reads supported transit cards through your device NFC hardware.
         Decoded balances, transaction records, station codes, route names, and
         related card metadata are used to show card details and maps in the app.
-        This processing happens on device unless you choose an explicit export,
-        import, sharing, backup, or opt-in contribution flow.
+        This processing happens on device except for anonymized transit data
+        collection described above, or when you choose an explicit export,
+        import, sharing, backup, or sync flow.
       </p>
 
       <h2>Platform and Distribution</h2>
