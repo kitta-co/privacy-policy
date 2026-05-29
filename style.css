@@ -1,17 +1,36 @@
+@font-face {
+  font-display: swap;
+  font-family: "Kitta Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("./assets/fonts/nekoko-inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kitta Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/nekoko-display.ttf") format("truetype");
+}
+
 :root {
   color-scheme: light;
-  --bg: #f7f8f4;
-  --fg: #1d2527;
-  --muted: #66706f;
-  --subtle: #8a9390;
-  --surface: #ffffff;
-  --surface-2: #f0f4ef;
-  --border: #dce3dd;
-  --accent: #126b65;
-  --accent-strong: #0b504b;
-  --link-bg: #e7f3f1;
-  --shadow: 0 18px 50px rgba(37, 53, 48, 0.12);
-  --shadow-soft: 0 8px 24px rgba(37, 53, 48, 0.08);
+  --cream: #fff6e9;
+  --ink: #1a1a2e;
+  --ink-soft: rgba(26, 26, 46, 0.7);
+  --ink-muted: rgba(26, 26, 46, 0.56);
+  --coral: #ff7a6b;
+  --peach: #ffc9a8;
+  --lemon: #ffe38a;
+  --sky: #9bd7e8;
+  --mint: #b8e6cc;
+  --lilac: #c9b6e4;
+  --paper: #fffaf1;
+  --border: var(--ink);
+  --shadow-sm: 3px 3px 0 0 var(--ink);
+  --shadow: 6px 6px 0 0 var(--ink);
+  --shadow-lg: 10px 10px 0 0 var(--ink);
 }
 
 * {
@@ -19,11 +38,11 @@
 }
 
 html {
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--cream);
+  color: var(--ink);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+    "Kitta Sans", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 17px;
   font-synthesis: none;
   line-height: 1.55;
@@ -34,10 +53,23 @@ html {
 
 body {
   background:
-    linear-gradient(180deg, rgba(18, 107, 101, 0.08), transparent 34rem),
-    radial-gradient(circle at 14% 0%, rgba(244, 177, 83, 0.16), transparent 24rem),
-    radial-gradient(circle at 92% 10%, rgba(82, 141, 196, 0.13), transparent 26rem),
-    var(--bg);
+    radial-gradient(var(--ink) 0.6px, transparent 0),
+    radial-gradient(circle at 12% 6%, rgba(255, 122, 107, 0.28), transparent 19rem),
+    radial-gradient(circle at 88% 8%, rgba(155, 215, 232, 0.32), transparent 24rem),
+    radial-gradient(circle at 58% 88%, rgba(184, 230, 204, 0.28), transparent 24rem),
+    var(--cream);
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  background-size:
+    22px 22px,
+    auto,
+    auto,
+    auto,
+    auto;
   margin: 0;
   min-height: 100svh;
   overflow-x: hidden;
@@ -51,118 +83,162 @@ body {
 }
 
 .policy {
-  width: min(100%, 820px);
+  width: min(100%, 840px);
 }
 
 .site-header {
   align-items: center;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(220, 227, 221, 0.9);
-  border-radius: 8px;
-  box-shadow: var(--shadow-soft);
+  background: var(--paper);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  padding: 12px 14px;
+  padding: 10px 12px;
 }
 
 .brand {
   align-items: center;
-  color: var(--fg);
+  color: var(--ink);
   display: inline-flex;
-  gap: 0.7rem;
+  gap: 0.72rem;
   min-width: 0;
   text-decoration: none;
 }
 
 .brand:hover {
-  color: var(--fg);
+  color: var(--ink);
 }
 
 .brand-mark {
-  background:
-    linear-gradient(135deg, #1b8c81 0%, #53b88d 48%, #f2b451 100%);
-  border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(18, 107, 101, 0.22);
+  align-items: center;
+  background: var(--coral);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  display: inline-flex;
   flex: 0 0 auto;
-  height: 2.1rem;
-  width: 2.1rem;
+  font-family: "Kitta Display", "Kitta Sans", sans-serif;
+  font-size: 1.2rem;
+  height: 2.35rem;
+  justify-content: center;
+  line-height: 1;
+  width: 2.35rem;
+}
+
+.brand-mark::before {
+  content: "K";
+  transform: translateY(-1px);
 }
 
 .brand-text {
   font-size: 1.02rem;
-  font-weight: 800;
+  font-weight: 820;
   letter-spacing: 0;
   overflow-wrap: anywhere;
 }
 
 .site-nav {
   display: flex;
-  gap: 0.35rem;
+  gap: 0.45rem;
   min-width: 0;
 }
 
 .nav-link {
-  border-radius: 8px;
-  color: var(--muted);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: var(--ink-soft);
   font-size: 0.9rem;
-  font-weight: 750;
+  font-weight: 820;
   min-width: 0;
-  padding: 0.52rem 0.8rem;
+  padding: 0.55rem 0.9rem;
   text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .nav-link:hover {
-  background: var(--surface-2);
-  color: var(--fg);
+  background: var(--lemon);
+  border-color: var(--border);
+  color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .nav-link--active {
-  background: var(--link-bg);
-  color: var(--accent-strong);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.nav-link--active:hover {
+  background: var(--ink);
+  color: var(--cream);
 }
 
 .hero {
   display: grid;
-  gap: 14px;
-  padding: 56px 0 26px;
+  gap: 16px;
+  padding: 58px 0 28px;
+  position: relative;
+}
+
+.hero::after {
+  background: var(--peach);
+  border: 1px dashed rgba(26, 26, 46, 0.42);
+  content: "";
+  height: 24px;
+  left: min(52vw, 520px);
+  position: absolute;
+  top: 56px;
+  transform: rotate(-8deg);
+  width: 98px;
 }
 
 .eyebrow,
 .app-kicker {
-  color: var(--accent);
+  color: var(--coral);
   font-size: 0.76rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
+  font-weight: 860;
+  letter-spacing: 0.1em;
   margin: 0;
   text-transform: uppercase;
 }
 
 h1 {
-  color: var(--fg);
-  font-size: clamp(2.6rem, 8vw, 5.8rem);
+  color: var(--ink);
+  font-family: "Kitta Display", "Kitta Sans", sans-serif;
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 0.96;
+  line-height: 0.95;
   margin: 0;
 }
 
 .policy h1 {
-  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-size: clamp(2.7rem, 7vw, 5rem);
   margin: 6px 0 8px;
 }
 
 h2 {
-  border-top: 1px solid var(--border);
-  color: var(--fg);
+  border-top: 2px solid rgba(26, 26, 46, 0.18);
+  color: var(--ink);
   font-size: 1.24rem;
+  font-weight: 820;
+  letter-spacing: 0;
   line-height: 1.2;
   margin: 40px 0 12px;
   padding-top: 28px;
 }
 
 .lede {
-  color: var(--muted);
-  font-size: 1.14rem;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  font-weight: 560;
   line-height: 1.58;
   margin: 0;
   max-width: 58ch;
@@ -170,8 +246,9 @@ h2 {
 
 p,
 li {
-  color: var(--muted);
+  color: var(--ink-soft);
   font-size: 1rem;
+  font-weight: 520;
   line-height: 1.72;
 }
 
@@ -180,25 +257,28 @@ p {
 }
 
 strong {
-  color: var(--fg);
+  color: var(--ink);
+  font-weight: 860;
 }
 
 a {
-  color: var(--accent-strong);
-  font-weight: 750;
-  text-underline-offset: 3px;
+  color: var(--ink);
+  font-weight: 820;
+  text-decoration-color: rgba(26, 26, 46, 0.4);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 a:hover {
-  color: #063936;
+  color: var(--coral);
 }
 
 .app-list {
   display: grid;
-  gap: 14px;
+  gap: 22px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style: none;
-  margin: 24px 0 0;
+  margin: 30px 0 0;
   padding: 0;
 }
 
@@ -207,135 +287,175 @@ a:hover {
 }
 
 .app-card {
-  --app-accent: var(--accent);
+  --app-bg: var(--paper);
+  --app-accent: var(--coral);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.86)),
-    linear-gradient(135deg, color-mix(in srgb, var(--app-accent), white 82%), transparent);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-soft);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent 40%),
+    var(--app-bg);
+  border: 2px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
   display: grid;
-  gap: 22px;
+  gap: 24px;
   grid-template-columns: 1fr auto;
-  min-height: 188px;
-  overflow: hidden;
-  padding: 24px;
+  min-height: 194px;
+  overflow: visible;
+  padding: 26px;
   position: relative;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.app-card:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translate(3px, 3px) rotate(0deg);
 }
 
 .app-card > div {
   min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .app-card::before {
   background: var(--app-accent);
+  border: 2px solid var(--border);
+  border-radius: 999px;
   content: "";
-  inset: 0 auto 0 0;
+  height: 56px;
   position: absolute;
-  width: 6px;
+  right: 24px;
+  top: -16px;
+  width: 56px;
+  z-index: 0;
 }
 
 .app-card::after {
-  background:
-    linear-gradient(135deg, transparent, color-mix(in srgb, var(--app-accent), white 72%));
-  border-radius: 999px;
+  background: rgba(255, 201, 168, 0.88);
+  border: 1px dashed rgba(26, 26, 46, 0.42);
   content: "";
-  height: 156px;
-  opacity: 0.38;
+  height: 20px;
+  left: 34px;
   position: absolute;
-  right: -48px;
-  top: -54px;
-  width: 156px;
+  top: -11px;
+  transform: rotate(-3deg);
+  width: 92px;
 }
 
 .app-list > li:first-child .app-card {
-  box-shadow: var(--shadow);
-  min-height: 220px;
+  box-shadow: var(--shadow-lg);
+  min-height: 224px;
+  transform: rotate(-0.7deg);
+}
+
+.app-list > li:nth-child(2n) .app-card {
+  transform: rotate(0.55deg);
+}
+
+.app-list > li:nth-child(2n + 1):not(:first-child) .app-card {
+  transform: rotate(-0.45deg);
 }
 
 .app-card h2 {
   border: 0;
-  color: var(--fg);
-  font-size: 1.55rem;
-  margin: 8px 0 10px;
+  color: var(--ink);
+  font-family: "Kitta Display", "Kitta Sans", sans-serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 0.98;
+  margin: 10px 0 12px;
   padding: 0;
 }
 
 .app-card p {
+  color: var(--ink-soft);
   margin: 0;
-  max-width: 56ch;
+  max-width: 58ch;
 }
 
 .app-kicker {
-  color: var(--app-accent);
+  color: var(--ink-muted);
 }
 
 .app-actions {
   align-self: end;
   display: grid;
-  gap: 10px;
-  min-width: 132px;
+  gap: 12px;
+  min-width: 154px;
   position: relative;
   z-index: 1;
 }
 
 .app-actions a {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(37, 53, 48, 0.06);
-  color: var(--fg);
+  background: var(--paper);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
   font-size: 0.9rem;
+  font-weight: 860;
   min-width: 0;
-  padding: 9px 13px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease,
+    background 160ms ease;
   white-space: normal;
 }
 
 .app-actions a:first-child {
-  background: var(--app-accent);
-  border-color: var(--app-accent);
-  color: #fff;
+  background: var(--ink);
+  color: var(--cream);
 }
 
 .app-actions a:hover {
-  border-color: var(--app-accent);
-  transform: translateY(-1px);
+  background: var(--lemon);
+  box-shadow: none;
+  color: var(--ink);
+  transform: translate(3px, 3px);
 }
 
 .app-card--transit {
-  --app-accent: #0d8a80;
+  --app-accent: var(--coral);
+  --app-bg: var(--lemon);
 }
 
 .app-card--korea {
-  --app-accent: #c64e4a;
+  --app-accent: var(--coral);
+  --app-bg: var(--sky);
 }
 
 .app-card--database {
-  --app-accent: #617f20;
+  --app-accent: var(--sky);
+  --app-bg: var(--mint);
 }
 
 .app-card--ai {
-  --app-accent: #6750a4;
+  --app-accent: var(--lemon);
+  --app-bg: var(--lilac);
 }
 
 .app-card--watch {
-  --app-accent: #b36715;
+  --app-accent: var(--lilac);
+  --app-bg: var(--peach);
 }
 
 .updated {
-  color: var(--subtle);
+  color: var(--ink-muted);
+  font-weight: 620;
   margin: 0 0 30px;
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-soft);
-  margin: 28px 0;
-  padding: 22px;
+  background: var(--paper);
+  border: 2px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  margin: 30px 0;
+  padding: 24px;
 }
 
 .card h2:first-child {
@@ -344,39 +464,68 @@ a:hover {
   padding-top: 0;
 }
 
-@supports not (color: color-mix(in srgb, red, white)) {
-  .app-card {
-    background: var(--surface);
-  }
+.policy > .eyebrow {
+  background: var(--lemon);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  display: inline-flex;
+  margin: 10px 0 18px;
+  padding: 0.42rem 0.75rem;
+}
 
-  .app-card::after {
-    display: none;
-  }
+.policy > p:last-child a {
+  background: var(--paper);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  padding: 0.56rem 0.88rem;
+  text-decoration: none;
 }
 
 @media (max-width: 760px) {
+  html {
+    font-size: 16px;
+  }
+
   .site,
   .policy {
     padding-left: 18px;
     padding-right: 18px;
+    width: 100%;
   }
 
   .site-header {
-    align-items: flex-start;
+    align-items: stretch;
+    border-radius: 28px;
     flex-direction: column;
+    max-width: 100%;
   }
 
   .site-nav {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
   }
 
   .nav-link {
-    flex: 1;
+    display: block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     text-align: center;
   }
 
   .hero {
     padding-top: 42px;
+  }
+
+  .hero::after {
+    left: auto;
+    right: 16px;
+    top: 42px;
   }
 
   .app-list {
@@ -387,6 +536,13 @@ a:hover {
   .app-list > li:first-child .app-card {
     grid-template-columns: 1fr;
     min-height: 0;
+    transform: none;
+    width: calc(100% - 10px);
+  }
+
+  .app-list > li:nth-child(2n) .app-card,
+  .app-list > li:nth-child(2n + 1):not(:first-child) .app-card {
+    transform: none;
   }
 
   .app-actions {
@@ -403,8 +559,9 @@ a:hover {
     padding-right: 14px;
   }
 
-  .app-card {
+  .app-card,
+  .card {
+    border-radius: 22px;
     padding: 20px;
   }
-
 }
