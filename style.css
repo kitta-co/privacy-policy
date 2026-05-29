@@ -11,7 +11,7 @@
   font-family: "Kitta Display";
   font-style: normal;
   font-weight: 400;
-  src: url("./assets/fonts/nekoko-display-20260529.ttf") format("truetype");
+  src: url("./assets/fonts/nekoko-display-20260529.ttf?v=020263d") format("truetype");
 }
 
 :root {
