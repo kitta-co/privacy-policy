@@ -438,6 +438,11 @@ a:hover {
   --app-bg: var(--lilac);
 }
 
+.app-card--network {
+  --app-accent: var(--sky);
+  --app-bg: var(--mint);
+}
+
 .app-card--watch {
   --app-accent: var(--lilac);
   --app-bg: var(--peach);

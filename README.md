@@ -11,4 +11,5 @@ Published with GitHub Pages from the `master` branch root at
 - K-Card Reader: `https://docs.kitta.co/k-card-reader/`
 - PortSQL: `https://docs.kitta.co/portsql/`
 - Tuno: `https://docs.kitta.co/tuno/`
+- DNSimple: `https://docs.kitta.co/dnsimple/`
 - HapTick: `https://docs.kitta.co/haptick/`
