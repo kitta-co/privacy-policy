@@ -448,6 +448,11 @@ a:hover {
   --app-bg: var(--peach);
 }
 
+.app-card--scanner {
+  --app-accent: var(--sky);
+  --app-bg: var(--paper);
+}
+
 .updated {
   color: var(--ink-muted);
   font-weight: 620;
