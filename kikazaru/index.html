@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kikazaru Privacy Policy</title>
+    <meta name="description" content="Privacy policy for Kikazaru.">
+    <link rel="stylesheet" href="../style.css?v=20260529-nekoko5">
+  </head>
+  <body>
+    <main class="policy">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>Kikazaru</h1>
+      <p class="updated">Last updated: August 20, 2026</p>
+
+      <p>
+        This privacy policy describes how the Kikazaru app ("Kikazaru") handles
+        information when you use it. Kikazaru is published by Kitta Co.
+      </p>
+
+      <h2>No Data Sent to Our Servers</h2>
+      <p>
+        <strong>
+          Kikazaru does not transmit your personal data or usage data to our
+          servers.
+        </strong>
+        We do not operate backend services for Kikazaru. There is no account to
+        create, no analytics, no crash reporting, and no advertising. Nothing
+        you configure or inspect inside the app is uploaded to us for any
+        purpose.
+      </p>
+
+      <h2>Network Traffic</h2>
+      <p>
+        Kikazaru works by running a tunnel on your device so it can redirect
+        requests to hostnames you have configured. It therefore sees network
+        traffic while it is switched on. All of that traffic is processed on
+        your device, in memory. None of it is sent to us.
+      </p>
+      <p>
+        Traffic that matches one of your rules is forwarded to the destination
+        <em>you</em> chose in that rule. Traffic that matches no rule is carried
+        through to its original destination without being opened. Kikazaru adds
+        no destination of its own, and we have no visibility into either path.
+      </p>
+      <p>
+        Requests and responses shown in the Traffic tab are held in memory, are
+        capped in size, and are discarded when the tunnel stops. They are not
+        written to disk.
+      </p>
+
+      <h2>The Root Certificate</h2>
+      <p>
+        To decrypt the hostnames your rules match, Kikazaru generates its own
+        certificate authority. The private key is created on your device, held
+        in the device keychain, and never leaves it. We never receive it and
+        could not make use of it if we did. Only hostnames matching a rule you
+        wrote are ever decrypted.
+      </p>
+
+      <h2>Data on Your Device</h2>
+      <p>
+        Your rules and settings are stored locally on your device according to
+        how the app and your operating system work, such as app sandbox storage
+        or backups you control. That data stays under your device and account
+        unless you explicitly share it elsewhere.
+      </p>
+
+      <h2>Platform and Distribution</h2>
+      <p>
+        Your device manufacturer and app store provider may process certain
+        technical or billing information according to their own policies when
+        you download or purchase apps. That processing is governed by their
+        terms and privacy notices, not by this policy.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If Kikazaru's data practices change materially in a future version, we
+        will update this page and, where required, provide notice through the app
+        or store listing.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy:
+        <a href="mailto:privacy@ieb.app">privacy@ieb.app</a>
+      </p>
+    </main>
+  </body>
+</html>

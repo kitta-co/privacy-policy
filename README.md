@@ -13,3 +13,4 @@ Published with GitHub Pages from the `master` branch root at
 - Tuno: `https://docs.kitta.co/tuno/`
 - DNSimple: `https://docs.kitta.co/dnsimple/`
 - HapTick: `https://docs.kitta.co/haptick/`
+- Kikazaru: `https://docs.kitta.co/kikazaru/`
