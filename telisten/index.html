@@ -6,7 +6,7 @@
     <title>Telisten Privacy Policy</title>
     <meta
       name="description"
-      content="Privacy policy for Telisten, a native Telegram music player for iPhone, iPad, and Mac."
+      content="Privacy policy for Telisten, a native Telegram music player for Android, iPhone, iPad, and Mac."
     >
     <link rel="stylesheet" href="../style.css?v=20260824-telisten1">
   </head>
@@ -14,7 +14,7 @@
     <main class="policy">
       <p class="eyebrow">Privacy Policy</p>
       <h1>Telisten</h1>
-      <p class="updated">Last updated: August 24, 2026</p>
+      <p class="updated">Last updated: September 6, 2026</p>
 
       <p>
         This privacy policy describes how Telisten handles information when
@@ -37,20 +37,37 @@
         playlist channels are processed by Telegram when you use the related
         features. Telegram handles this information under its own terms and
         privacy policy. Telisten does not use a bot, proxy, or Kitta Co server
-        for this connection.
+        for this connection. The Android app uses Telegram's TDLib library
+        to make the direct connection. Telisten signs in to an existing
+        Telegram account; it does not create a separate Kitta account.
+      </p>
+      <p>
+        If you configure a music-search bot, your queries and interactions
+        are sent to that bot through your Telegram account. The bot operator
+        can process those messages under its own practices. No search bot
+        is configured by default. Comments and reactions are sent to Telegram
+        only when you choose to post them. Listen Together sends session
+        information and, when hosting, the app's playing audio to the selected
+        Telegram group or channel; it does not record your microphone.
       </p>
 
       <h2>Lyrics</h2>
       <p>
         When lyrics are requested, Telisten sends the track title, artist, and
-        duration to LRCLIB to find a match. It does not send the audio file,
-        your phone number, or your Telegram login credentials to LRCLIB.
-        Returned lyrics are cached on your device.
+        duration to LRCLIB (or the HTTPS lyrics server you choose in Settings)
+        to find a match. It does not send the audio file, your phone number,
+        or your Telegram login credentials to the lyrics service. The service
+        also receives network information such as your IP address when your
+        device connects. Returned lyrics are cached on your device.
       </p>
 
       <h2>Data on Your Device</h2>
       <p>
-        Telegram authorization keys are stored in the system Keychain. Account
+        On iPhone, iPad, and Mac, Telegram authorization keys are stored in
+        the system Keychain. On Android, Telegram session data is stored in
+        TDLib's encrypted app-private database; its encryption key is protected
+        by Android Keystore. Android cloud backup and device transfer are
+        disabled for app data. Account
         labels, app preferences, the local music-chat index, favorites,
         downloaded audio, artwork, chat avatars, and lyrics are stored locally
         on your device. Telisten may automatically remove older cached files
@@ -61,16 +78,21 @@
       <h2>Your Controls</h2>
       <p>
         You can remove downloaded tracks in Telisten. Signing out removes the
-        selected account's Telisten authorization keys from the Keychain and
-        asks Telegram to end that session. Deleting the app removes its local
-        app data through iOS or macOS. Reactions, comments, forwarded playlist
+        selected account's Telegram session. On Apple platforms it also removes
+        Telisten authorization keys from the Keychain. Downloaded music may
+        remain available locally after sign-out. Deleting the app removes its local
+        app data through Android, iOS, or macOS. Reactions, comments, forwarded playlist
         entries, and playlist channels are Telegram content and can also be
-        managed through Telegram.
+        managed through Telegram. To terminate app sessions, use Telegram's
+        Settings &gt; Devices. To delete your Telegram account and the data
+        Telegram holds for it, use Telegram's account-deletion controls or
+        <a href="https://my.telegram.org/auth?to=delete">Telegram's account deletion page</a>.
+        This deletes your Telegram account, not just its connection to Telisten.
       </p>
 
       <h2>Platform and Distribution</h2>
       <p>
-        Apple, Telegram, and LRCLIB may process technical, account, or network
+        Google Play, Apple, Telegram, and your lyrics service may process technical, account, or network
         information under their own policies when you download, authenticate,
         or use their services. That processing is not governed by this policy.
       </p>
