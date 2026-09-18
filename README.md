@@ -14,3 +14,6 @@ Published with GitHub Pages from the `master` branch root at
 - DNSimple: `https://docs.kitta.co/dnsimple/`
 - HapTick: `https://docs.kitta.co/haptick/`
 - Kikazaru: `https://docs.kitta.co/kikazaru/`
+
+- Homem privacy: `https://docs.kitta.co/homem/`
+- Homem support: `https://docs.kitta.co/homem/support/`
