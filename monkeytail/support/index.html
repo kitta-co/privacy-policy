@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monkeytail Support — cURL, JSON, Imports &amp; Proxies | Kitta Co</title><meta name="description" content="Help with Monkeytail for iPhone and iPad: send API requests, import cURL and collections, format JSON, run scripts, and select proxies.">
+<link rel="canonical" href="https://docs.kitta.co/monkeytail/support/"><link rel="icon" href="/monkeytail/assets/icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Kitta Co">
+<meta property="og:title" content="Monkeytail Support — cURL, JSON, Imports &amp; Proxies | Kitta Co"><meta property="og:description" content="Help with Monkeytail for iPhone and iPad: send API requests, import cURL and collections, format JSON, run scripts, and select proxies.">
+<meta property="og:url" content="https://docs.kitta.co/monkeytail/support/"><meta property="og:image" content="https://docs.kitta.co/monkeytail/assets/banner.png">
+<meta property="og:image:alt" content="Monkeytail — HTTP and cURL for iPhone by Kitta Co">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css?v=20260529-nekoko5"><link rel="stylesheet" href="/monkeytail/monkeytail.css">
+
+</head><body><main class="policy monkeytail">
+<nav aria-label="Breadcrumb"><a href="/">Kitta Co</a> / <a href="/monkeytail/">Monkeytail</a></nav>
+
+<p class="eyebrow">Support</p><h1>Monkeytail</h1><p><a href="mailto:support@ieb.app?subject=Monkeytail%20support">Contact support</a></p>
+<h2>Send a request</h2><p>Choose a saved request or add one, enter a complete HTTP or HTTPS URL, and tap Send. Use the request tabs to edit headers, parameters, body, authentication, and scripts. Response shows status, timing, headers, and body. Tap Pretty or Tree for JSON, or search the response text.</p>
+<h2>Import cURL</h2><p>Open the workspace actions menu, choose Import, and paste a cURL command. Shell quoting and multiline commands are parsed as text; Monkeytail never executes a shell. File uploads, multipart bodies, and unsupported flags produce an error rather than silently changing the request.</p>
+<h2 id="formats">Import and export collections</h2><p>Use the workspace actions menu to import pasted JSON or a file from Files. Imports append collections and environments. Native Monkeytail workspace exports preserve all settings, including proxy settings. Review imported content before sending requests or enabling scripts.</p>
+<ul><li><strong>Postman:</strong> v2/v2.1 collection JSON and environment JSON import; v2.1 collection export with the active environment as collection variables.</li><li><strong>Insomnia:</strong> v4 JSON import and export. Convert YAML or newer formats to supported JSON in the source tool first.</li><li><strong>Monkeytail:</strong> complete workspace JSON import and export.</li></ul><p>Third-party formats do not preserve every setting. Nested environment inheritance, dynamic template tags, full OAuth flows, multipart uploads, and the complete Postman or Insomnia scripting runtimes are not supported.</p>
+<h2>Environments and scripts</h2><p>Use <code>{{variable}}</code> in request fields and choose a named environment. Scripts offer a small <code>pm</code> compatibility API for variables, requests, responses, assertions, and tests. Scripts are local, time limited, and cannot make separate network requests. Imported scripts start disabled.</p>
+<h2>Proxies and connections</h2><p>Settings offers system networking or a custom HTTP CONNECT, HTTPS CONNECT, or SOCKS5 proxy. Supply the host, port, and optional credentials. A failed custom proxy does not fall back to a direct connection. Allow local-network access in iOS Settings to reach LAN APIs. TLS certificate verification remains enabled; a debugging CA must be installed and trusted in iOS when required.</p>
+<h2>Limits</h2><p>Imports are limited to 10 MB; responses to 20 MB. Text and tree previews are limited to 1 MB, while the full received response can be saved. Recent history keeps up to 50 request definitions. JavaScript execution has a three-second deadline.</p>
+<h2>Report a problem</h2><p>Email <a href="mailto:support@ieb.app">support@ieb.app</a> with the app version, iOS version, affected feature, and a minimal non-sensitive example. Remove tokens, passwords, private headers, and personal information before sharing. No diagnostic information is uploaded automatically.</p>
+<footer><a href="/monkeytail/">Monkeytail</a> · <a href="/monkeytail/privacy/">Privacy</a> · <a href="/monkeytail/support/">Support</a><p>© 2026 Kitta Ltd</p></footer>
+</main></body></html>
