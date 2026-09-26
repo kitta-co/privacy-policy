@@ -14,35 +14,42 @@
     <main class="policy">
       <p class="eyebrow">Privacy Policy</p>
       <h1>CardBal</h1>
-      <p class="updated">Last updated: May 29, 2026</p>
+      <p class="updated">Last updated: September 26, 2026</p>
 
       <p>
         This privacy policy describes how the CardBal app ("CardBal") handles
         information when you use it. CardBal is published by Kitta Co.
       </p>
 
-      <section class="card">
-        <p>
-          <strong>
-            CardBal does not transmit your personal data or usage data to our
-            servers.
-          </strong>
-          We do not operate backend services for CardBal that collect, store, or
-          process information you generate in the app for analytics,
-          advertising, account management, or profiling.
-        </p>
-      </section>
-
-      <h2>Anonymized Transit Data Collection</h2>
+      <h2>Station Reports You Submit</h2>
       <p>
-        CardBal collects anonymized transit data to improve the program,
-        including station and fare decoding, map coverage, and compatibility
-        with supported transit cards. The collected data is limited to technical
-        transit-card fields such as station codes, fare values, route or record
-        format hints, deduplication hashes, and related raw trip-record bytes
-        needed for decoder research. It does not include your name, contact
-        details, precise device location, payment account credentials, or
-        personally identifiable account information.
+        When you submit a missing-station or station-code correction report,
+        CardBal sends the station name, report type, the station code or suggested
+        code, and any optional line, operator, city, country, or notes you enter.
+        You may also choose a pin on a map or use your current location. If you
+        do, the exact coordinates of that pin are sent. CardBal does not read
+        your location automatically for reports.
+      </p>
+      <p>
+        Each report also includes a SHA-256 hash of the associated card ID,
+        an app-specific device ID, the app version, and the card family. The
+        raw card ID and trip history are not sent with a station report. We
+        store submitted reports in Cloudflare D1 to review requests and improve
+        station data. The public request list at
+        <a href="https://cardbal.ieb.app/">cardbal.ieb.app</a> shows station
+        details and an approximate location when a pin was supplied. It does
+        not show the card ID hash, device ID, app version, notes, or exact
+        coordinates.
+      </p>
+
+      <h2>Optional Korean Card Research Data</h2>
+      <p>
+        If you enable Korean card crowdsourcing, eligible T-money and
+        EZL/Cashbee scans may upload technical trip-record data to help improve
+        decoding. This can include raw trip-record bytes, station and fare
+        fields, a deduplication hash, a SHA-256 hash of the card ID, and the
+        last four characters of the card ID. You can turn this setting off at
+        any time. This data is not collected through station reports.
       </p>
 
       <h2>Data on Your Device</h2>
@@ -50,9 +57,9 @@
         Transit card information, scan results, imported backups, card artwork,
         and app settings may be stored locally on your device according to how
         the app and your operating system work. That data remains under your
-        device and account unless you explicitly export it, import it elsewhere,
-        sync it through platform services, or share it using operating system
-        features outside our servers.
+        device and account unless you submit a station report, enable Korean
+        card crowdsourcing, explicitly export it, sync it through platform
+        services, or share it using operating system features.
       </p>
 
       <h2>NFC and Transit Card Data</h2>
@@ -60,9 +67,9 @@
         CardBal reads supported transit cards through your device NFC hardware.
         Decoded balances, transaction records, station codes, route names, and
         related card metadata are used to show card details and maps in the app.
-        This processing happens on device except for anonymized transit data
-        collection described above, or when you choose an explicit export,
-        import, sharing, backup, or sync flow.
+        This processing happens on device except for the optional submissions
+        described above, or when you choose an explicit export, import,
+        sharing, backup, or sync flow.
       </p>
 
       <h2>Platform and Distribution</h2>
@@ -83,7 +90,7 @@
 
       <h2>Contact</h2>
       <p>
-        Questions about this policy:
+        Questions about this policy or requests concerning submitted data:
         <a href="mailto:privacy@ieb.app">privacy@ieb.app</a>
       </p>
     </main>
