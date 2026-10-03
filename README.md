@@ -7,6 +7,8 @@ Published with GitHub Pages from the `master` branch root at
 
 ## Pages
 
+- Uniboard: `https://docs.kitta.co/uniboard/`
+
 - CardBal: `https://docs.kitta.co/cardbal/`
 - K-Card Reader: `https://docs.kitta.co/k-card-reader/`
 - PortSQL: `https://docs.kitta.co/portsql/`
