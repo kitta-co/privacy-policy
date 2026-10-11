@@ -19,3 +19,5 @@ Published with GitHub Pages from the `master` branch root at
 
 - Homem privacy: `https://docs.kitta.co/homem/`
 - Homem support: `https://docs.kitta.co/homem/support/`
+
+- t. privacy: `https://docs.kitta.co/tdot/`
